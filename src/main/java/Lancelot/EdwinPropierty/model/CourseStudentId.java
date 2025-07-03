@@ -20,7 +20,21 @@ public class CourseStudentId implements Serializable {
     }
 
     // getters y setters
+    public Long getStudentId() {
+        return studentId;
+    }
 
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
+    }
+
+    public Long getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
+    }
     // equals y hashCode obligatorios para claves compuestas
     @Override
     public boolean equals(Object o) {

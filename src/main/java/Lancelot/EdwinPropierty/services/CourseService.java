@@ -36,6 +36,8 @@ public class CourseService {
         return courseRepository.findById(id).map(course -> {
             course.setCourseName(newCourseData.getCourseName());
             course.setDescription(newCourseData.getDescription());
+            course.setStartTime(newCourseData.getStartTime());
+            course.setEndTime(newCourseData.getEndTime());
             return courseRepository.save(course);
         }).orElseThrow(() -> new RuntimeException("Not found course with id: " + id));
     }
